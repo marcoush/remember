@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    style="@style/SCREEN"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <include
+        android:id="@+id/toolbarid"
+        layout="@layout/toolbar"
+        />
+
+  <!--  <Button
+        android:id="@+id/publishid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarid"
+        style="@style/BTN"
+        android:text="@string/shareyourmemory"/>-->
+
+
+
+    <!--ALL SETTINGS IN HERE (if this contains more settings at some pt in the future, user can scroll down benath the bottom of smartphone screen)-->
+    <ScrollView
+        android:id="@+id/settingsscrollcontainerid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarid"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="vertical">
+
+            <!--title general settings-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/settingstitleid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/generalsettings"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!--general setting 1-->
+            <LinearLayout
+                android:id="@+id/darkmodesettingid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/darkmodetextid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/screenmode"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.618">
+
+                    <Button
+                        android:id="@+id/screenmodebuttonid"
+                        style="@style/BTN_INVIS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textSize="11sp"
+                        tools:text="@string/darkmode" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--general setting 2-->
+            <LinearLayout
+                android:id="@+id/applanguagesettingid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/applanguagetextid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/applanguage"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.618">
+
+                    <Button
+                        android:id="@+id/applanguagebuttonid"
+                        style="@style/BTN_INVIS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textSize="11sp"
+                        tools:text="@string/german" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--general setting 3
+            TODO (info languages) -memo lang nicht hier als einstellung, sondern als FILTER im frontend!!!
+             -> Idee: voreingestellt ist dann, dass die angezeigten Memos (in home, search) in der systemLang sind.
+             Und der Utente kann dann zB einstellen, dass er doch noch engl. dazufiltern möchte und kriegt dann eben
+             basierend auf seinen Interessen alles angezeigt
+                (in search lässt sich das mit den suchbegriffen und einer
+                queue piuttosto leicht umsetzen - in home allerdings müsste man wahrscheinlich sich für eine sprache
+                entscheiden, damit das Memo-Propositätssystem nicht irgendwie wild mit die Sprachen rummischen muss)
+            <LinearLayout
+                android:id="@+id/memolanguagesettingid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/memolanguagetextid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/memolanguage"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.618">
+
+                    <Button
+                        android:id="@+id/memolanguagebuttonid"
+                        style="@style/BTN_INVIS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textSize="11sp"
+                        tools:text="@string/german" />
+                </LinearLayout>
+            </LinearLayout>-->
+
+
+            <!--general setting 4-->
+            <LinearLayout
+                android:id="@+id/logoutid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1">
+                <TextView
+                    android:id="@+id/currentusertextid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/userdoublepoint"
+                    android:layout_marginEnd="3dp"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/currentuserid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    tools:text="Spanische Inquisition"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.618">
+
+                    <Button
+                        android:id="@+id/logoutbuttonid"
+                        style="@style/BTN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textSize="11sp"
+                        android:text="@string/logout"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

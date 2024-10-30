@@ -1,0 +1,214 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id "com.google.gms.google-services" //// Add the Google services Gradle plugin
+    //mongoDB
+    id 'org.jetbrains.kotlin.kapt'
+}
+/*//mongodb
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}*/
+
+
+
+android {
+    namespace 'com.example.remember'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.remember"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+        /*vectorDrawables {//TODO 1/2 das hier am 17.5. wegen zu großer apk size (220mb) in optimistischer hoffnng deaktiviert
+            useSupportLibrary true
+        }*/
+    }
+
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        //viewBinding true //TODO 2/2 das hier am 17.5. wegen zu großer apk size (220mb) in optimistischer hoffnng deaktiviert
+        compose true
+        viewBinding true
+        dataBinding true
+    }
+    kotlinOptions {
+          jvmTarget = '17'
+        //jvmTarget = '1.8'
+    }
+    /*composeOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+        kotlinCompilerExtensionVersion '1.3.2'
+    }*/ //should be determined automatically based on the compose version i'm using, don't need to explicitly specify it
+    packagingOptions {
+        //next to prevent error: Execution failed for task ':app:mergeDebugJavaResource'. > A failure occurred while executing com.android.build.gradle.internal.tasks.MergeJavaResWorkAction
+        //(error kam wahrscheinlich vom Umzug von AS auf E:/)
+        exclude 'META-INF/native-image/org.mongodb/bson/native-image.properties'
+
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+    /*packagingOptions {//TODO 3/2 das hier am 17.5. wegen zu großer apk size (220mb) in optimistischer hoffnng deaktiviert
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+    */
+}
+
+//firebase macht mich feddich6
+apply plugin: 'com.google.gms.google-services'
+//mongoDB
+apply plugin: "realm-android"
+realm {
+    syncEnabled = true
+}
+
+dependencies {
+    //TODO diese beiden impls rausnehmen idlt //TODO 4/3 das hier am 17.5. wegen zu großer apk size (220mb) in optimistischer hoffnng deaktiviert
+    //implementation "com.googlecode.mp4parser:isoparser:1.0.2"
+    //implementation "com.github.lassana:continuous-audiorecorder:1.3.2"
+
+    //app compat
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    //lifecycle
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.2'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
+    //implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1' //not sure
+    //compose
+    /*implementation 'androidx.activity:activity-compose:1.7.1'
+    implementation platform('androidx.compose:compose-bom:2022.10.00')
+    implementation 'androidx.compose.ui:ui'
+    implementation 'androidx.compose.ui:ui-graphics'
+    implementation 'androidx.compose.ui:ui-tooling-preview'
+    implementation 'androidx.compose.material3:material3'
+    implementation platform('androidx.compose:compose-bom:2022.10.00')
+    androidTestImplementation platform('androidx.compose:compose-bom:2022.10.00')
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+    androidTestImplementation platform('androidx.compose:compose-bom:2022.10.00')
+    debugImplementation 'androidx.compose.ui:ui-tooling'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest'*/
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:27.1.0') // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-storage'
+    //für die Authentifizierung mit firebase (chatGPT 15.5.)
+    // implementation 'com.google.firebase:firebase-messaging:23.1.2' //not sure
+
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment:2.7.3'
+    implementation 'androidx.navigation:navigation-ui:2.7.3'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.activity:activity-compose:1.7.2'
+    implementation platform('androidx.compose:compose-bom:2022.10.00')
+    implementation 'androidx.compose.ui:ui'
+    implementation 'androidx.compose.ui:ui-graphics'
+    implementation 'androidx.compose.ui:ui-tooling-preview'
+    implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2'
+    //test runner für testen von code functionality ... ganz wichtig
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    //espresso for onView and perform(click...) ... also drin lassen
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+// Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:32.0.0')
+// When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics'
+//TODO /C/ Add the dependencies for any other desired Firebase products https://firebase.google.com/docs/android/setup#available-libraries
+
+
+    //mpandroidchart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    //mongoDB adapters
+    //implementation 'io.realm:android-adapters:3.1.0' //hat bekanntlich nicht funktioniert, stattdessen die Zeile unter mir genomme :D
+    implementation 'com.github.realm:realm-android-adapters:v3.1.0'
+    implementation 'org.mongodb:mongodb-driver-sync:4.11.0' //vorher 4.5.1 dann kam aber error: BSON_CODEC_NOT_FOUND bei Updates. und Filters. in Publish.class
+    //desugaring bei 4.11.0 , 4.8.2 , 4.7.2 , 4.6.1 , basically allem > 4.5.1 ---> GERADE GEFUNDENE LÖSUNG:
+    /*    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+          jvmTarget = '17'
+    }
+*/
+
+    //TODO (gradle) .gradle ordner in "C:/User" umziehen auf E:/
+
+    //for later... not initially necessary for functionality of db, just the adapters
+
+
+/*
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:27.1.0')
+    // Declare the dependency for the Realtime Database library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-database'
+
+
+*/
+
+    //für die html funktionalität chatGPT 17.5.
+    implementation 'androidx.core:core-ktx:1.12.0'
+    androidTestImplementation platform('androidx.compose:compose-bom:2022.10.00')
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+
+//trash damit die app gradle überhaupt klappt (ganz zu beginn des app-aufsetzens vonnöten gewesen)
+    constraints {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0") {
+            because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
+        }
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0") {
+            because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
+        }
+    }
+    //verknüpfung dieser app mit der firebase!
+    //apply plugin: 'com.google.gms.google-services' //das wird außerhalb von dependencies gemacht!
+    debugImplementation 'androidx.compose.ui:ui-tooling'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest'
+
+    //for the bottom navigation in main
+    implementation "androidx.navigation:navigation-fragment-ktx:2.7.3"
+    implementation "androidx.navigation:navigation-ui-ktx:2.7.3"
+
+    //for mediaplayer notification
+    implementation 'androidx.media:media:1.6.0'
+
+    //eventbus
+    implementation 'org.greenrobot:eventbus:3.3.1'
+
+    //für den horizontalscrollview (hsv) für die categories, damit in 2 (oder sogar in 3) rows angezeigt bekomme
+    //implementation 'com.github.Gregadeaux:android-LinearLayoutWeight:0.4'
+
+    //für den niceren hsv
+    //implementation 'com.yarolegovich:discrete-scrollview:1.5.1' //6.7. doesn't compile / isn't found
+    //implementation(name:'discrete-scrollview-1.5.1', ext:'aar')
+
+
+
+}

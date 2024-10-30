@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginHorizontal="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+<!--1 llparty-->
+<LinearLayout
+    android:id="@+id/llparty"
+    android:gravity="center"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <!--wegen layout problem dynamisch einlesen..-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/party"
+            android:text="@string/party"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"/>
+        <Button
+            android:id="@+id/club"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/club"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/festival"
+        style="@style/BTN_CTGRY_SMALL_COLORLESS"
+        android:text="@string/festival" />
+</LinearLayout>
+<!--2 lltravel-->
+<LinearLayout
+    android:id="@+id/lltravel"
+    android:layout_toEndOf="@+id/llparty"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginEnd="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/travel"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/travel"/>
+        <Button
+            android:id="@+id/nature"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/nature"/>
+        <Button
+            android:id="@+id/trip"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/trip" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/adventure"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/adventure" />
+        <Button
+            android:id="@+id/illegal"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/illegal"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+<!--3 llpeople-->
+<LinearLayout
+    android:id="@+id/llpeople"
+    android:layout_toEndOf="@+id/lltravel"
+    android:gravity="center"
+    android:layout_marginEnd="10dp"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/friends"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/friends" />
+        <Button
+            android:id="@+id/family"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/family"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/relationship"
+        style="@style/BTN_CTGRY_SMALL_COLORLESS"
+        android:text="@string/relationship"/>
+
+</LinearLayout>
+
+
+<!--4 llwork-->
+<LinearLayout
+    android:id="@+id/llwork"
+    android:orientation="vertical"
+    android:layout_below="@+id/llparty"
+    android:gravity="center"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="5dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/university"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/university"/>
+        <Button
+            android:id="@+id/school"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/school"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/work"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/work" />
+        <Button
+            android:id="@+id/abroad"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/abroad"/>
+    </LinearLayout>
+</LinearLayout>
+
+
+<!--5 llhappy-->
+<LinearLayout
+    android:id="@+id/llhappy"
+    android:layout_below="@+id/llparty"
+    android:layout_toEndOf="@id/llwork"
+    android:gravity="center"
+    android:layout_marginEnd="10dp"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/happy"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/happy" />
+        <Button
+            android:id="@+id/inlove"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/inlove"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/relieved"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/relieved"/>
+    </LinearLayout>
+</LinearLayout>
+
+<!--6 lldream-->
+<LinearLayout
+    android:id="@+id/lldream"
+    android:layout_below="@+id/llparty"
+    android:layout_toEndOf="@id/llhappy"
+    android:gravity="center"
+    android:layout_marginEnd="10dp"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/dream"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/dream" />
+        <Button
+            android:id="@+id/luck"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/luck" />
+    </LinearLayout>
+</LinearLayout>
+
+<!--7 llsad-->
+<LinearLayout
+    android:id="@+id/llsad"
+    android:layout_below="@+id/llwork"
+    android:gravity="center"
+    android:layout_marginEnd="10dp"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/sad"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/sad" />
+        <Button
+            android:id="@+id/nostalgic"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/nostalgic"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/depressive"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/depressive"/>
+        <Button
+            android:id="@+id/lonely"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/lonely" />
+    </LinearLayout>
+</LinearLayout>
+
+
+<!--llangry-->
+<LinearLayout
+    android:id="@+id/llangry"
+    android:layout_below="@+id/llwork"
+    android:layout_toEndOf="@+id/llsad"
+    android:gravity="center"
+    android:layout_marginEnd="10dp"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/angry"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/angry" />
+        <Button
+            android:id="@+id/anxious"
+            style="@style/BTN_CTGRY_SMALL_COLORLESS"
+            android:text="@string/anxious"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/desperate"
+        style="@style/BTN_CTGRY_SMALL_COLORLESS"
+        android:text="@string/desperate" />
+
+</LinearLayout>
+
+
+
+</RelativeLayout>

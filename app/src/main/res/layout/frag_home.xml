@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    style="@style/SCREEN">
+
+    <!--unneeded actually, but kept for possible future adaptations-->
+    <TextView
+        android:id="@+id/texthomeid"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+
+    <!--recent memories (rv muss in relLayout sein, sonst zeigt ned an)-->
+    <TextView
+        android:id="@+id/textrecentmemoriesid"
+        android:layout_below="@+id/texthomeid"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textStyle="bold"
+        android:text="@string/recentmemories"
+        android:textSize="17sp"/>
+    <RelativeLayout
+        android:id="@+id/llrecentmemoriesid"
+        android:layout_below="@+id/textrecentmemoriesid"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvrecentmemoriesid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ProgressBar
+            android:id="@+id/progressbarrecentid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:tint="@color/color_ui"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <!--forYou memories (rv muss in relLayout sein, sonst zeigt ned an)-->
+    <TextView
+        android:id="@+id/textforyoumemoriesid"
+        android:layout_below="@+id/llrecentmemoriesid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/foryoumemories"
+        android:textAlignment="textStart"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+    <RelativeLayout
+        android:id="@+id/llforyoumemoriesid"
+        android:layout_below="@+id/textforyoumemoriesid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="horizontal">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvforyoumemoriesid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ProgressBar
+            android:id="@+id/progressbarforyouid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:tint="@color/color_ui"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+
+
+    <!--vis gone-->
+    <Button
+        android:visibility="gone"
+        android:id="@+id/managecategoriesbuttonid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        style="@style/BTN"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/managecategories"/>
+
+    <!--vis gone-->
+    <Button
+        android:visibility="gone"
+        android:id="@+id/backtologinbuttonid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        style="@style/BTN"
+        android:layout_below="@id/managecategoriesbuttonid"
+        android:text="@string/or_login"/>
+
+    <!--vis gone-->
+    <Button
+        android:visibility="gone"
+        android:id="@+id/backtoregisterbuttonid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        style="@style/BTN"
+        android:layout_below="@id/backtologinbuttonid"
+        android:text="@string/orRegister"/>
+
+    <!--vis gone-->
+    <Button
+        android:visibility="gone"
+        android:id="@+id/showusernameid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        style="@style/BTN"
+        android:layout_below="@id/backtoregisterbuttonid"
+        android:text="show username"/>
+
+
+    <!-- <com.google.android.material.floatingactionbutton.FloatingActionButton
+         android:id="@+id/addpublishid"
+         android:layout_width="85dp"
+         android:layout_height="85dp"
+         android:layout_alignParentEnd="true"
+         android:layout_alignParentBottom="true"
+         android:src="@drawable/plus_white"
+         android:scaleType="fitCenter"
+         android:layout_marginEnd="16dp"
+         android:layout_marginBottom="16dp"
+         android:contentDescription="@string/shareyourmemories"
+
+     hoveredFocusedTranslationZ: focus vergrößer, mal ausprobieren
+             style="@style/COLOR_SCREEN"
+
+     -->
+
+
+
+</RelativeLayout>

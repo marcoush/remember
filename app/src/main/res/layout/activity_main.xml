@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativelayoutmainid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/SCREEN"
+    tools:context=".Main">
+
+    <include
+        android:id="@+id/toolbarid"
+        layout="@layout/toolbar"
+        />
+    <!--android:elevation="2dp"
+    elevation höher als memofrag, damit es immer im foreground ist-->
+    <!--<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/bottomsheetstatetvid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:contentDescription="extended_fab_content_desc"
+        android:text="STATE"
+        app:icon="@drawable/googleg_disabled_color_18"
+        />
+    app:layout_anchorGravity="bottom|right|end"-->
+
+   <!-- <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/plus_white"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="72dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/shareyourmemories" /> TODO 1.4. weg mit fab-->
+
+
+    <!--<FrameLayout
+        android:id="@+id/middlecontainerid"
+        android:layout_below="@id/toolbarid"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+    <fragment
+        android:id="@+id/nav_viewfragid"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_below="@id/toolbarid"
+        android:layout_above="@id/bottom_containerid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/clmemoid"
+        android:layout_below="@id/toolbarid"
+        android:layout_above="@id/bottom_containerid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/memofragid"
+            android:name="com.example.remember.ui.memo.MemoFragment"
+            tools:layout="@layout/frag_memo"
+            android:visibility="invisible"
+            app:layout_behavior="@string/bottom_sheet_behavior"
+            app:behavior_peekHeight="56dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <!--            app:behavior_hideable="true"
+-->
+
+<!--            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="72dp"
+            android:padding="10dp"
+-->
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <!--dieses nav_view fragment ist das ACTUAL fragment (aka search-frag, home-frag oder profile-frag)...-->
+    <!--<fragment
+        android:id="@+id/nav_viewfragid"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarid"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation" />-->
+    <!--   android:layout_marginTop="?attr/actionBarSize"-->
+
+    <!--<androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_containerid"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_alignParentTop="true">-->
+        <!--coordLayout für bottom sheet-->
+        <!--
+                android:id="@+id/relativememolayoutid"
+        tools:context="com.example.remember.ui.memo.MemoFragment"
+-->
+
+        <!--das memoFrag ist im bottom sheet panel basically :)-->
+        <!-- <include
+            android:id="@+id/memofragid"
+            layout="@layout/frag_memo"
+            />
+       android:elevation="1dp"-->
+      <!--  <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/memofragid"
+            android:name="com.example.remember.ui.memo.MemoFragment"
+            android:visibility="invisible"
+            tools:layout="@layout/frag_memo"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+    <!-- tools:layout="@layout/frag_memo"-->
+
+
+ <!--   <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/memofragid"
+        android:name="com.example.remember.ui.memo.MemoFragment"
+        tools:layout="@layout/frag_memo"
+        android:layout_below="@id/toolbarid"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- testativo: dieses fragment überschreibt einfach das alte. visibility change mit GONE GONE GONE... liefe das?-->
+    <!--
+         android:label="searchBNV"
+    -->
+
+    <!-- der search bar, der das BNV ersetzt, wenn keybord sich öffnet (normalmente GONE)-->
+
+
+
+    <FrameLayout
+        android:id="@+id/bottom_containerid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <!--ausprobierhalber das bnv mal in den frame container gepackt!
+        TODO (info) der bnv kann in diesem FrameLayout sein, muss er aber nicht, es ist obsolet, ob er hier drin ist oder außerhalb
+        WEIL: er kann ohnehin NIEMALS replacet werden mit dem sbb-frag (über getParentFragManager und .replace, .addtobackstack, etc.)
+        (DENN er ist zwingend notwendig für die Funktionalität mit dem nav view (wo die normalen Frags drin sind)
+        -->
+
+        <!--1 bnv-->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomnavigationid"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            style="@style/SCREEN"
+            app:menu="@menu/bottom_nav_menu" />
+
+
+<!--spoiler: hat nicht funktioniert, in foreground bringen geht iwie nicht!!!-->
+        <!--2 searchicon frag, damit searchicon searchfield in search-frag apertet-->
+    <!--    <LinearLayout
+            android:id="@+id/llsearchiconfragid"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:weightSum="3"
+            android:orientation="horizontal">
+            <fragment
+                android:id="@+id/searchiconfragid"
+                android:name="com.example.remember.ui.search.SearchIcon"
+                tools:layout="@layout/frag_searchicon"
+                android:visibility="visible"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+            <Space
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+        </LinearLayout>-->
+
+
+
+        <!-- TODO (info) debug -> -->
+    <!--    <fragment
+            android:id="@+id/bottom_search_viewfragid"
+            android:name="com.example.remember.ui.search.SearchBottomBar"
+            android:visibility="invisible"
+            tools:layout="@layout/frag_search_bottombar"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+        </fragment>-->
+
+</FrameLayout>
+
+
+
+
+    <!--der ist nun in HOMefragment-->
+    <!-- <com.google.android.material.floatingactionbutton.FloatingActionButton
+         android:id="@+id/addpublishid"
+         android:layout_width="85dp"
+         android:layout_height="85dp"
+         android:layout_alignParentEnd="true"
+         android:layout_above="@+id/bottom_containerid"
+         android:src="@drawable/plus_white"
+         style="@style/COLOR_SCREEN"
+         android:scaleType="fitCenter"
+         android:layout_marginEnd="16dp"
+         android:layout_marginBottom="16dp"
+         android:contentDescription="@string/shareyourmemories" />
+     hoveredFocusedTranslationZ: focus vergrößer, mal ausprobieren-->
+
+</RelativeLayout>

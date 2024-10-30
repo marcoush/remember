@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/languageforsearch"
+        android:layout_marginBottom="5dp"
+        android:textSize="15sp"
+        style="@style/TXT"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="start"
+        android:gravity="center_vertical">
+
+     <!--   <Button
+            android:id="@+id/standardlanguageid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/BTN"
+            tools:text="@string/german" /> -->
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            tools:src="@drawable/germanflag"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:padding="10dp"
+            android:contentDescription="@string/uploadicon"
+            android:id="@+id/germanflagid"/>
+
+        <TextView
+            android:id="@+id/standardlanguagegermanid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/standard"
+            android:visibility="invisible"
+            style="@style/TXT"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_gravity="start"
+        android:gravity="center_vertical">
+
+     <!--   <Button
+            android:id="@+id/secondlanguageid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/BTN"
+            tools:text="@string/english"/> -->
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            tools:src="@drawable/englishflag"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:padding="10dp"
+            android:contentDescription="@string/micicon"
+            android:id="@+id/englishflagid"/>
+
+        <TextView
+            android:id="@+id/standardlanguageenglishid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/standard"
+            android:visibility="invisible"
+            style="@style/TXT"/>
+
+    </LinearLayout>
+
+</LinearLayout>

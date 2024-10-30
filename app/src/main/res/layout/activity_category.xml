@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".categories.CategoryManager"
+    style="@style/SCREEN">
+
+    <!--1 HIER NEUE KATEGORIE ERSCHAFFEN (zB Friends) -->
+    <LinearLayout
+        android:id="@+id/createcategoryllid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/createcategoryedittextid"
+            android:hint="Write here name of new category (basic category always in engl)"
+            android:textSize="13sp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/createcategorybuttonid"
+            style="@style/BTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Neue Category erschaffen" />
+    </LinearLayout>
+
+
+
+
+
+    <!--category ID -->
+    <TextView
+        android:id="@+id/categoryidtextid"
+        android:layout_below="@+id/createcategoryllid"
+        android:text="category id: "
+        style="@style/TXT"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/categoryidid"
+        android:layout_below="@+id/createcategoryllid"
+        android:layout_toEndOf="@+id/categoryidtextid"
+        tools:text="1"
+        style="@style/TXT"
+        android:textSize="15sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <!--MEZZANINE Erklärung-->
+    <TextView
+        android:id="@+id/textviewexplanationnewlanguagesid"
+        android:layout_below="@+id/createcategoryllid"
+        android:layout_marginTop="100dp"
+        android:text="Im Folgenden für die jew. Sprache einen neuen Kategorienamen hinzufügen:"
+        style="@style/TXT"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <!--2 HIER BASIS KATEGORIENAMEN EINTIPPEN (zB Friends) und fieldname (zB name_de) -->
+    <LinearLayout
+        android:id="@+id/existingcategoryllid"
+        android:layout_below="@id/textviewexplanationnewlanguagesid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/existingcategoryedittextid"
+            android:textSize="13sp"
+            android:hint="Hier existierende Kategorie reintippen, für die unten der jew. Kategoriename in neuer Sprache hinzugefügt wird"
+            android:layout_margin="10dp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/translatedfieldedittextid"
+            android:textSize="13sp"
+            android:hint="Hier translation fieldname eingeben (bspw. name_de)"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!--3 LAYOUT FÜR KATEGORIE EINGABE (zB Feier, Arbeit, Großkrotzenburg)-->
+    <LinearLayout
+        android:id="@+id/addtranslatedcategoryllid"
+        android:layout_below="@id/existingcategoryllid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/addtranslatedcategoryedittextid"
+            android:hint="Hier Kategorienamen auf entsprechender Sprache rein"
+            android:textSize="12sp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/addtranslatedcategorybuttonid"
+            style="@style/BTN"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kategorienamen hinzufügen" />
+
+    </LinearLayout>
+
+    <!--4 LAYOUT FÜR TAGS (zB situations, feelings, places {?})-->
+    <LinearLayout
+        android:id="@+id/addtagstocategoryllid"
+        android:layout_below="@id/addtranslatedcategoryllid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/addtagtocategoryedittextid"
+            android:hint="Hier TAGNAME eingeben (situations or feelings {or places?})"
+            android:textSize="12sp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/addtagtocategorybuttonid"
+            style="@style/BTN"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TAGNAME dieser category hinzuf" />
+
+    </LinearLayout>
+
+
+ <!--4 LAYOUT FÜR AMOUNT OF AUDIOS IN SPECIFIC CATEGORY -->
+    <LinearLayout
+        android:id="@+id/amountofaudiosincategoryllid"
+        android:layout_below="@id/addtagstocategoryllid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/amountofaudiosedittextid"
+            android:text="0"
+            android:textSize="12sp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/addamountofaudiostocategorybuttonid"
+            style="@style/BTN"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AMOUNT OF uploaded + listended AUDIOS der category hinzufügen" />
+
+    </LinearLayout>
+
+
+
+
+
+
+    <!--5 KAPPESALARM AB HIER bissl-->
+    <EditText
+        android:id="@+id/createsubcollectionedittextid"
+        android:hint="Hier collection-name von neuer Subcollection rein, zB feelings"
+        android:layout_above="@+id/createsubcollectionbuttonid"
+        android:textSize="13sp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/createsubcollectionbuttonid"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/movebuttonid"
+        style="@style/BTN"
+        android:textSize="10sp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentStart="true"
+        android:text="create subcollection"/>
+    <Button
+        android:id="@+id/movebuttonid"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        style="@style/BTN"
+        android:textSize="9sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:text="move"/>
+
+
+    <!--6 BACK BUTÒN-->
+    <Button
+        android:id="@+id/backtologinbuttonid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/BTN"
+        android:textSize="11sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="back to main"/>
+
+</RelativeLayout>

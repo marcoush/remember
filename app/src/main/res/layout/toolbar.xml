@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_gravity="top"
+    android:id="@+id/toolbarid"
+    style="@style/SCREEN"
+    android:elevation="4dp"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+<!--TODO (C) was ist "elevation"-->
+
+    <TextView
+        android:id="@+id/toolbartitleid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Name der Activity"
+        android:textColor="@color/color_one"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="end">
+        <!--upload / publish (former fab)-->
+        <ImageButton
+            android:id="@+id/toolbaruploadbuttonid"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/upload"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:padding="15dp"
+            android:contentDescription="@string/uploadicon"/>
+        <!--upload / publish (former fab)-->
+        <ImageButton
+            android:id="@+id/toolbarrecordyourselfbuttonid"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/mic"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:padding="15dp"
+            android:contentDescription="@string/record"/>
+        <!--settings-->
+        <ImageButton
+            android:id="@+id/toolbarsettingsid"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/threelines_grey"
+            android:contentDescription="@string/settings"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.Toolbar>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/stockdayid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.Graph"
+    android:background="@color/black">
+    <!--wenn man keinen background setzt, dann overlappen die fragments-->
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/graphid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.github.mikephil.charting.charts.BarChart>
+
+</LinearLayout>
+<!--wenn das hier kein RelativeLayout ist, sondern Frame, dann???-->

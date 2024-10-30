@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PopupAnimation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+
+    <style name="COLORIZED_BTN">
+        <item name="android:textColor">#FFF</item>
+        <item name="android:backgroundTint">@color/color_one</item>
+        <item name="android:minWidth">0dp</item> <!-- Set minimum width to 0dp in order to not have Zwischenräume bei short text buttons -->
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay.MyApp.Button.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+
+
+
+
+
+</resources>

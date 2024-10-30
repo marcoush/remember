@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    app:contentPadding="5dp"
+    android:layout_marginTop="5dp"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    style="@style/SCREEN_CARD">
+
+    <!--Zeilenumbruch trick für android:text   &#10;   -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--TODO (C) dem LL einen button click animation verpassen-->
+
+        <!--1 Show title, languageflag -->
+        <LinearLayout
+            android:layout_marginStart="2dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/titleid"
+                tools:text="Der Wurzelspaß aus Akkgrönigen"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                style="@style/TXT"
+                android:maxLines="2"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <!--TODO (C) max lines 2 for titel uploaded audio rv sollte erwünscht sein, dann werden halt irrational
+                 lange titel, die über 2 zeilen gehen, truncated , das sollte im interesse des utente been.-->
+            <ImageView
+                android:id="@+id/languageflagid"
+                android:scaleType="fitXY"
+                tools:src="@drawable/germanflag"
+                android:padding="12dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:layout_weight="0"
+                android:layout_width="17dp"
+                android:layout_height="17dp"/>
+        </LinearLayout>
+
+
+        <!--2 Show clock & duration -->
+        <LinearLayout
+            android:layout_marginStart="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/clockid"
+                android:layout_marginEnd="3dp"
+                android:src="@drawable/clock"
+                tools:background="@drawable/clock"
+                android:scaleType="fitXY"
+                android:padding="12dp"
+                android:layout_width="17dp"
+                android:layout_height="17dp"/>
+            <TextView
+                android:id="@+id/durationid"
+                style="@style/TXT"
+                android:layout_gravity="center_vertical"
+                tools:text="01:49:34"
+                android:textSize="11sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+        <!--3 Show calendar & date -->
+        <LinearLayout
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/calendarid"
+                android:layout_marginEnd="3dp"
+                android:src="@drawable/calendar"
+                tools:background="@drawable/calendar"
+                android:scaleType="fitXY"
+                android:padding="12dp"
+                android:layout_width="17dp"
+                android:layout_height="17dp"/>
+            <TextView
+                android:id="@+id/dateid"
+                tools:text="19. Jan 2093"
+                style="@style/TXT"
+                android:singleLine="true"
+                android:textSize="11sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <!-- TODO (A) im model die language flag nicht mehr anzeigen, weil sie wird oben schon angezeigt links vom Suchfeld -->
+        </LinearLayout>
+
+        <!--4 Show listeners -->
+        <LinearLayout
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/headphoneid"
+                android:layout_marginEnd="3dp"
+                android:src="@drawable/headphone2"
+                tools:background="@drawable/headphone2"
+                android:scaleType="fitXY"
+                android:padding="12dp"
+                android:layout_width="17dp"
+                android:layout_height="17dp"/>
+            <TextView
+                android:id="@+id/listenersid"
+                tools:text="17"
+                style="@style/TXT"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <!--<TextView
+                android:id="@+id/headphoneid"
+                tools:text="17"
+                style="@style/TXT"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/listenerstextid"
+                android:layout_marginStart="4dp"
+                tools:text="@string/listeners"
+                style="@style/TXT"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />-->
+        </LinearLayout>
+
+
+        <!--4 Show categories (general width = 180(width)-10+10(contentpadding)=160-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/llcategorycontainerrow1id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llcategorycontainerrow2id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--<HorizontalScrollView
+            android:id="@+id/hsvmodelid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+
+            <LinearLayout
+                android:id="@+id/hsvcategorycontainerid"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:orientation="horizontal" />
+             hier werden die CategoryManager Buttons dynamisch eingelesen
+        </HorizontalScrollView>-->
+        <!--wenn name lang ist und titel lang ist UND es viele kategorien gibt, dann könnt' es sein
+        dass die kategorien-anzeige unten truncated wird ... daher hsv vertical?? auf jeden fall muss
+        der vorige hsv WEG, weil das beißt sich mit dem ohnehin schon drüberliegenden hsv für den swipe
+        durch die audios...-->
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SCREEN"
+    android:layout_centerVertical="true">
+
+    <!--    <ImageButton
+            android:id="@+id/searchBNVlanguagefilterid"
+            android:layout_marginStart="16dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="0"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/language"
+            android:padding="10dp"
+            tools:src="@drawable/germanflag" /> -->
+
+
+   <!--     <EditText
+            android:id="@+id/searchbottombaredittextid"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="26dp"
+            android:imeOptions="actionSearch"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            android:layout_gravity="center_vertical"
+            style="@style/EDTTXT_search"
+            android:singleLine="true"
+            android:ems="10"
+            android:layout_marginEnd="26dp"
+            android:hint="@string/titlecreatororcategory" /> -->
+
+   <!-- <com.example.remember.ui.search.CustomEditTextWithBackPressEvent-->
+    <EditText
+        android:id="@+id/searchbottombaredittextid"
+        style="@style/EDTTXT_search"
+        android:layout_width="306dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="26dp"
+        android:ems="10"
+        android:hint="@string/titlecreatororcategory"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="13sp" />
+<!--imeOptions actionSearch: lupe wird bei ENTER-knopf angezeigt-->
+
+
+
+        <!-- progess bar soll genau über dem language flag sein-->
+        <ProgressBar
+            android:id="@+id/languageprocessbarid"
+            style="?android:attr/progressBarStyle"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <ImageButton
+                android:id="@+id/languagefilterid"
+                android:layout_marginStart="16dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="0"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/applanguage"
+                android:padding="14dp"
+                tools:src="@drawable/germanflag" />
+
+        </LinearLayout>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:scrollbarThumbHorizontal="@drawable/custom_scrollbar_thumb"
+    android:fadeScrollbars="true"
+    android:scrollbarSize="2dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="3dp">
+            <!--1 llparty-->
+            <Button
+                android:id="@+id/party"
+                android:text="@string/party"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"/>
+            <Button
+                android:id="@+id/club"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/club"/>
+            <Button
+                android:id="@+id/festival"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/festival" />
+            <!--2 lltravel-->
+            <Button
+                android:id="@+id/travel"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/travel"/>
+            <Button
+                android:id="@+id/nature"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/nature"/>
+            <Button
+                android:id="@+id/trip"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/trip" />
+            <Button
+                android:id="@+id/adventure"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/adventure" />
+            <Button
+                android:id="@+id/illegal"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/illegal"/>
+            <!--3 llpeople-->
+            <Button
+                android:id="@+id/friends"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/friends" />
+            <Button
+                android:id="@+id/family"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/family"/>
+            <Button
+                android:id="@+id/relationship"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/relationship"/>
+            <!--4 llwork-->
+
+            <Button
+                android:id="@+id/university"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/university"/>
+            <Button
+                android:id="@+id/school"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/school"/>
+            <Button
+                android:id="@+id/work"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/work" />
+            <Button
+                android:id="@+id/abroad"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/abroad"/>
+            <!--5 llhappy-->
+            <Button
+                android:id="@+id/happy"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/happy" />
+            <Button
+                android:id="@+id/inlove"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/inlove"/>
+            <Button
+                android:id="@+id/relieved"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/relieved"/>
+            <!--6 lldream-->
+            <Button
+                android:id="@+id/dream"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/dream" />
+            <Button
+                android:id="@+id/luck"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/luck" />
+            <!--7 llsad-->
+            <Button
+                android:id="@+id/sad"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/sad" />
+            <Button
+                android:id="@+id/nostalgic"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/nostalgic"/>
+            <Button
+                android:id="@+id/depressive"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/depressive"/>
+            <Button
+                android:id="@+id/lonely"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/lonely" />
+            <!--llangry-->
+            <Button
+                android:id="@+id/angry"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/angry" />
+            <Button
+                android:id="@+id/anxious"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/anxious"/>
+            <Button
+                android:id="@+id/desperate"
+                style="@style/BTN_CTGRY_SMALL_COLORLESS"
+                android:text="@string/desperate" />
+        </LinearLayout>
+
+</HorizontalScrollView>

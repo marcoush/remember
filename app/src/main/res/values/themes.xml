@@ -1,0 +1,283 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.remember2" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_one
+        </item> <!--used for the app's toolbar and other primary UI elements-->
+        <item name="colorPrimaryVariant">@color/color_two
+        </item> <!--used for highlighting or differentiating certain UI components-->
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. TODO they are the same primary + secondary, just as that in night\themes -->
+        <item name="colorSecondary">@color/color_one
+        </item> <!--secondary Buttons or action items, Selection or highlighting states, Divider lines or separators, Progress indicators, Tabs or navigation, Secondary text or labels-->
+        <item name="colorSecondaryVariant">@color/color_two</item> <!--...-->
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+
+    <!-- LIGHT MODE:
+        <item name="background_color">#FFF</item>
+        <item name="text_color">#000</item>
+        -->
+    <style name="SCREEN">
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
+    <style name="SCREEN_GREY">
+        <item name="android:background">#222021</item>
+    </style>
+
+    <style name="SCREEN_FLIPPED">
+        <item name="android:background">@color/main_color</item>
+    </style>
+
+    <style name="SCREEN_COLOR">
+        <item name="android:background">@color/color_one</item>
+    </style>
+
+    <style name="SCREEN_CARD" parent="Widget.MaterialComponents.CardView">
+        <item name="android:background">#FFFFFF</item>
+    </style>
+<!--parent="CardView" geht auch... aber hab mal das dringelassen mit MaterialComp, falls ich noch special Zeug adden möchte.. D:-->
+
+
+    <style name="TXT">
+        <item name="android:textColor">@color/main_color</item>
+    </style>
+
+    <style name="EDTTXT_distinctiveHint">
+        <item name="android:textColorHint">@color/main_color</item>
+    </style>
+
+    <style name="EDTTXT_login">
+        <item name="android:background">@color/lightgrey</item>
+        <item name="android:textColorHint">@color/main_color</item>
+    </style>
+
+    <style name="EDTTXT_search">
+        <item name="android:background">#FFF</item>
+        <item name="android:textColorHint">@color/color_one</item>
+    </style>
+
+
+
+    <style name="BTN_INVIS">
+        <item name="android:textColor">@color/main_color</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="BTN_INVIS_MINI">
+        <item name="android:textColor">@color/main_color</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:paddingHorizontal">4dp</item>
+        <item name="android:layout_marginHorizontal">2dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!--RV steht für RecyclerView-->
+    <!--<style name="BTN_CTGRY_RV">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:backgroundTint">@color/color_one</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingHorizontal">15dp</item>
+        <item name="android:paddingVertical">7dp</item>
+        <item name="android:layout_marginEnd">7dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.Button.Rounded</item>
+    </style>
+    kann eh nie eingesetzt werden:-->
+
+
+    <style name="BTN_CTGRY_SMALL_COLORLESS" parent="Theme.MaterialComponents">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:paddingHorizontal">4dp</item>
+        <item name="android:layout_marginHorizontal">2dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.Button.Rounded</item>
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+
+
+    <!--<item name="android:background">@drawable/button_gradient_color</item>-->
+
+
+
+    <!--<style name="BTN_CTGRY_SMALL_COLORLESS">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingVertical">3dp</item>
+        <item name="android:paddingHorizontal">3dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <item name="android:background">@drawable/button_gradient_color</item>
+    colorless, weil ich gradient colors als background nutzen wollte ABER sinnloserweise geht das natürlich nicht! 10.7.-->
+
+    <style name="BTN">
+        <item name="android:textColor">#FFF</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:backgroundTint">@color/color_one</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+
+
+    <!--da die colors für die category btns nicht dynamically in-code eingelesen werden können, habe ich für jeden der aktuell 8 gefärbten categorybutton ein pre-determined style entwickelt: -->
+    <style name="BTN_CTGRY_SMALL_VIOLET" parent="Theme.MaterialComponents">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:backgroundTint">@color/violet</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:paddingHorizontal">4dp</item>
+        <item name="android:layout_marginHorizontal">2dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.Button.Rounded</item>
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BTN_CTGRY_SMALL_ORANGE" parent="Theme.MaterialComponents">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:backgroundTint">@color/orange</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:paddingHorizontal">4dp</item>
+        <item name="android:layout_marginHorizontal">2dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.Button.Rounded</item>
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BTN_CTGRY_SMALL_GREEN" parent="Theme.MaterialComponents">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:backgroundTint">@color/green</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:paddingHorizontal">4dp</item>
+        <item name="android:layout_marginHorizontal">2dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.Button.Rounded</item>
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BTN_CTGRY_SMALL_RED" parent="Theme.MaterialComponents">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:backgroundTint">@color/red</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:paddingHorizontal">4dp</item>
+        <item name="android:layout_marginHorizontal">2dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.Button.Rounded</item>
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BTN_CTGRY_SMALL_CYAN" parent="Theme.MaterialComponents">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:backgroundTint">@color/cyan</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:paddingHorizontal">4dp</item>
+        <item name="android:layout_marginHorizontal">2dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.Button.Rounded</item>
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BTN_CTGRY_SMALL_LIGHTGREEN" parent="Theme.MaterialComponents">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:backgroundTint">@color/lightgreen</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:paddingHorizontal">4dp</item>
+        <item name="android:layout_marginHorizontal">2dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.Button.Rounded</item>
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BTN_CTGRY_SMALL_BLUEISH" parent="Theme.MaterialComponents">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:backgroundTint">@color/blueish</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:paddingHorizontal">4dp</item>
+        <item name="android:layout_marginHorizontal">2dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.Button.Rounded</item>
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BTN_CTGRY_SMALL_DARKRED" parent="Theme.MaterialComponents">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:backgroundTint">@color/darkred</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingVertical">4dp</item>
+        <item name="android:paddingHorizontal">4dp</item>
+        <item name="android:layout_marginHorizontal">2dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.Button.Rounded</item>
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+
+
+
+
+
+
+
+</resources>

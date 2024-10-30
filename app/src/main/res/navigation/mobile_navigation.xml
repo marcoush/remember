@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobilenavigationid"
+    app:startDestination="@+id/homenavfragid">
+
+    <fragment
+        android:id="@+id/searchnavfragid"
+        android:name="com.example.remember.ui.search.SearchFragment"
+        android:label="@string/find"
+        tools:layout="@layout/frag_search"/>
+    <!--
+             app:launchSingleTop="true"
+   <action
+            android:id="@+id/action_search_to_home"
+            app:destination="@id/homenavfragid"
+            app:popUpTo="@id/homenavfragid"
+            app:popUpToInclusive="true" />
+    </fragment>-->
+
+    <fragment
+        android:id="@+id/homenavfragid"
+        android:name="com.example.remember.ui.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/frag_home"/>
+    <!--
+               app:launchSingleTop="true"
+ <action
+            android:id="@+id/action_home_to_search"
+            app:destination="@id/searchnavfragid"
+            app:popUpTo="@id/homenavfragid"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_home_to_profile"
+            app:destination="@id/profilenavfragid"
+            app:popUpTo="@id/homenavfragid"
+            app:popUpToInclusive="true" />
+    </fragment>-->
+
+    <!--
+    app:popUpTo
+    This attribute specifies the destination to which the back stack should be popped when navigating to a new destination
+    app:popUpToInclusive="true"
+    This attribute is a boolean that determines whether the destination specified in popUpTo should be included in the popping operation.
+    -->
+
+    <fragment
+        android:id="@+id/profilenavfragid"
+        android:name="com.example.remember.ui.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/frag_profile"/>
+    <!--
+             app:launchSingleTop="true"
+   <action
+            android:id="@+id/action_profile_to_home"
+            app:destination="@id/homenavfragid"
+            app:popUpTo="@id/homenavfragid"
+            app:popUpToInclusive="true" />
+    </fragment>
+    -->
+
+    <!--(info) dieses vierte frag zeigt die memos an, ist ein frag von Main ,aber taucht nicht im bnv auf
+    <fragment
+        android:id="@+id/memonavfragid"
+        android:name="com.example.remember.ui.memo.MemoFragment"
+        android:label="@string/memory"
+        tools:layout="@layout/frag_memo" />-->
+    <!--INFO! das memoFrag wird Teil des bottom sheet panels sein, und daher nicht im nav container sein so wie die anderen Geschwister :(-->
+
+    <!--<fragment
+        android:id="@+id/searchBottomBarFragment"
+        android:name="com.example.remember.ui.search.SearchBottomBar"
+        android:label="Search Bottom Bar Fragment" /> -->
+</navigation>

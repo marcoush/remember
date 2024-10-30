@@ -1,0 +1,334 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="large_text" translatable="false">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="app_name" translatable="false">remember</string>
+    <string name="title_home" translatable="false">Home</string>
+    <string name="register">Registrieren</string>
+    <string name="registerCAPS">REGISTRIEREN</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="password">Passwort</string>
+    <string name="welcome">Ein herzliches Hallo!</string> <!--TODO ich weiß ja nicht..-->
+    <string name="logout">Ausloggen</string>
+    <string name="changeLang">Sprache ändern</string>
+    <string name="login">Einloggen</string>
+    <string name="loginCAPS">LOGIN</string>
+    <string name="usernameoremail">Nutzername oder Email</string>
+    <string name="name" translatable="false">Name</string>
+
+    <!-- intent keys -->
+    <string name="intent_message" translatable="false">intent_message</string>
+    <string name="main" translatable="false">remember</string>
+    <string name="remember" translatable="false">remember</string>
+    <string name="home" translatable="false">Home</string>
+    <string name="title_activity_login">Einloggen</string>
+    <string name="title_activity_profile">Profil</string>
+    <string name="title_activity_main" translatable="false">Main</string>
+    <string name="loginAufforderung">logge Dich ein :)</string>
+    <string name="registrierAufforderung">Registriere dich</string>
+    <string name="or_login">oder logge Dich ein</string>
+    <string name="homeSuche">Suche nach einer Memo</string>
+    <string name="managecategories">Kategorien verwalten</string>
+
+
+    <!--TODO (future) neue strings adden hier, wenn in Firestore welche hinzugefügt wurden-->
+    <!--A) situations (15 pc. at 5.7.23) sorted-->
+    <string name="party">Party</string>
+    <string name="friends">Freunde</string>
+    <string name="adventure">Abenteuer</string>
+    <string name="relationship">Beziehung</string>
+    <string name="vacation">Urlaub</string>
+    <string name="trip">Ausflug</string>
+    <string name="nature">Natur</string>
+    <string name="university">Uni</string>
+    <string name="school">Schule</string>
+    <string name="work">Arbeit</string>
+    <string name="family">Familie</string>
+    <string name="abroad">Ausland</string>
+    <string name="festival">Festival</string>
+    <string name="dream">Traum</string>
+    <string name="illegal">Illegal</string>
+    <!--<string name="holidays">Urlaub</string>STATTDESSEN NUR NOCH VACATION + TRIP-->
+
+    <!--TODO (future) neue strings adden hier, wenn in Firestore welche hinzugefügt wurden-->
+    <!--B) feelings (11 pc. at 5.7.23) sorted-->
+    <string name="happy">fröhlich</string>
+    <string name="inlove">verliebt</string>
+    <string name="lonely">einsam</string>
+    <string name="sad">traurig</string>
+    <string name="relieved">erleichtert</string>
+    <string name="depressive">depressiv</string>
+    <string name="lucky">glücklich</string>
+    <string name="desperate">verzweifelt</string>
+    <string name="nostalgic">nostalgisch</string>
+    <string name="angry">wütend</string>
+    <string name="anxious">ängstlich</string>
+    <!--<string name="confused">verwirrt</string>-->
+    <!--<string name="shocked">schockiert</string>-->
+
+
+    <!--<string name="uploadyourmemories"><![CDATA[Veröffentliche deine memos \n (Audio hochladen oder Aufnehmen)]]></string>-->
+    <string name="aufzurmain"><![CDATA[main->]]></string>
+
+
+    <!--Publish activity-->
+    <string name="accept">Bestätigen</string>
+    <string name="play_pause">Play/Pause</string>
+    <string name="listeninghistory">Wiedergabeverlauf</string>
+    <string name="deploycategories">In welche Kategorien passt deine memo?</string>
+    <string name="upload">Hochladen</string>
+    <string name="fillintitle">Titel hier eintragen</string>
+    <string name="choosetitle">Wie möchtest du deine memo nennen?</string>
+    <string name="done">Fertig</string>
+    <string name="delete">Löschen</string>
+    <string name="error_audio_recorder" translatable="false">Audio recorder error: %1$s</string>
+    <string name="audio_db_title_format" translatable="false"><xliff:g id="format">yyyy-MM-dd HH:mm:ss</xliff:g></string>
+    <string name="audio_db_artist_name" translatable="false">Deine Aufzeichnungen</string>
+    <string name="audio_db_album_name" translatable="false">Audio recordings</string>
+    <string name="error_no_permissions" translatable="false">The recorder requires `RECORD_AUDIO` and `WRITE_EXTERNAL_STORAGE` permissions.</string>
+    <string name="publish">Veröffentlichen</string>
+    <string name="search">Suchen</string>
+    <string name="chooseaudiofromsmartphone">Audio aus dem Handyspeicher auswählen</string>
+    <string name="username">Nutzername</string>
+    <string name="orRegister">oder registriere Dich</string>
+    <string name="deleteaudiohinweis">Konfuzius sagt: &lt;i&gt; Ein nicht begonnenes Audio kann nicht gelöscht werden &lt;/i&gt;</string>
+    <string name="durationnull" translatable="false">00:00</string>
+    <string name="recordingactive">Aufzeichnung aktiv</string>
+    <string name="recordedtime">Aufzeichnung: %1$s</string>
+    <string name="finishrecording">Aufnahme finalisieren</string>
+    <string name="deleterecording">Aufnahme löschen</string>
+    <string name="notification_channel_id" translatable="false">NOTIFICATION CHANNEL ID :D</string>
+    <string name="noitsfine">Ne, passt</string>
+    <string name="recordingfrom">Aufnahme vom</string>
+    <string name="recording">Aufnahme</string>
+    <string name="discard">Verwerfen</string>
+    <string name="save">Speichern</string>
+    <string name="situations">Situationen</string>
+    <string name="feelings">Emotionen</string>
+    <string name="title">Titel</string>
+    <string name="category">Kategorie</string>
+
+    <!--Settings & System & Answers-->
+    <string name="generalsettings">Allgemeine Einstellungen</string>
+    <string name="settings">Einstellungen</string>
+    <string name="darkmode">Dark Mode</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="gotosettings">Zu den Einstellungen</string>
+    <string name="turnedon">AN</string>
+    <string name="turnedoff">AUS</string>
+    <string name="systemdefault">Systemeinstellung</string>
+    <string name="applanguage">App-Sprache</string>
+    <string name="screenmode">Bildschirmmodus</string>
+    <string name="german">Deutsch</string>
+    <string name="english">Englisch</string>
+    <string name="day">Tag</string>
+    <string name="night">Nacht</string>
+    <string name="system">System</string>
+    <string name="back">Zurück</string>
+    <string name="yesitsfine">Ja passt</string>
+    <string name="yes">Ja</string>
+    <string name="notyet">Nein, doch noch nicht</string>
+    <string name="no">Nein</string>
+    <string name="audiolanguage">Sprache der memos</string>
+    <string name="standard" translatable="false">Standard</string>
+
+    <!--home frag-->
+    <string name="shareyourmemories">Teile deine memos</string>
+    <string name="shareyourmemory">Teile deine memo</string>
+    <string name="searchformemories">Nach memos Suchen</string>
+    <string name="yourdailymemory">Deine tägliche memo</string>
+    <string name="uploadfromsmartphone">Hochladen</string>
+    <string name="recordyourself">Aufnehmen</string>
+    <string name="micicon">Mikrofon</string>
+    <string name="uploadicon">Hochladen</string>
+
+    <!--search + profile frag-->
+    <string name="titlecreatororcategory">Titel, Autor oder Kategorie</string>
+    <string name="languageforsearch">Sprache der memos</string>
+    <string name="profile">Ich</string> <!--TODO (general) "Ich" statt urspr. "Dein Profil" mal sehen ob das so smiert 8.10.-->
+    <string name="listenedmemories">angehörte memos</string>
+    <string name="registeredsince">remember seit:</string>
+    <string name="uploadedmemories">geteilte memos</string>
+    <string name="listeners">Zuhörer</string>
+    <string name="nolisteners">0 :(</string>
+    <string name="nouploadedmemories">Noch keine memos geteilt</string>
+    <string name="nolistenedmemories">Noch keine memos angehört</string>
+    <string name="monday">Mo</string>
+    <string name="tuesday">Di</string>
+    <string name="wednesday">Mi</string>
+    <string name="thursday">Do</string>
+    <string name="friday">Fr</string>
+    <string name="saturday">Sa</string>
+    <string name="sunday">So</string>
+
+
+    <!--Memory activity-->
+    <string name="memory">memo</string>
+    <string name="fastforward">Vorspulen</string>
+    <string name="rewind">Zurückspulen</string>
+    <string name="remainingtime">"Verbleibende Zeit: %1$s"</string>
+    <string name="playingactive">Wiedergabe aktiv</string>
+    <string name="recentmemories">Frisch eingetroffen</string>
+    <string name="foryoumemories">Material nach deinem Geschmack</string>
+    <string name="preferredcategories">Lieblingskategorien</string>
+    <string name="travel">Reisen</string>
+    <string name="club">Club</string>
+    <string name="at">am</string>
+    <string name="selectcategories">Welche Kategorien passen zu deiner memo?</string>
+    <string name="uploaded_listened">Toggle zwischen hochgeladenen und angehörten memos</string>
+    <string name="week">Woche</string>
+    <string name="month">6 Wo</string>
+    <string name="sixmonths">6 Mon</string>
+    <string name="lastweek" translatable="false">-1w</string>
+    <string name="secondlastweek" translatable="false">-2w</string>
+    <string name="thirdlastweek" translatable="false">-3w</string>
+    <string name="fourthlastweek" translatable="false">-4w</string>
+    <string name="fifthlastweek" translatable="false">-5w</string>
+    <string name="sixthlastweek" translatable="false">-6w</string>
+    <string name="lastmonth" translatable="false">-1mon</string>
+    <string name="secondlastmonth" translatable="false">-2mon</string>
+    <string name="thirdlastmonth" translatable="false">-3mon</string>
+    <string name="fourthlastmonth" translatable="false">-4mon</string>
+    <string name="fifthlastmonth" translatable="false">-5mon</string>
+    <string name="sixthlastmonth" translatable="false">-6mon</string>
+    <string name="memolanguage">Sprache der Memos</string>
+    <string name="find">Finden</string>
+    <!--TODO (general) "Finden" ist etwas rallig-rausig mal sehen ob das so schmiert8.10.-->
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="loadmore">mehr anzeigen</string>
+    <string name="language">Sprache</string>
+    <string name="luck">Glück</string>
+    <string name="userdoublepoint">Nutzer:</string>
+    <string name="appnotifications">App-Benachrichtigungen</string>
+    <string name="opensettings">Einstellungen öffnen</string>
+    <string name="updatesearch">Suchergebnisse aktualisieren</string>
+    <string name="like">Mag ich</string>
+    <string name="record_pause">Aufnehmen/Pausieren</string>
+    <string name="expand">auf-/einklappen</string>
+
+    <!--TOASTS & DIALOGUES-->
+    <string name="permissionrequired">Berechtigung benötigt</string>
+    <string name="permissionrequiredtext">Die Berechtigung für das Mikrofon wird für die Aufnahme benötigt. Bitte erteile sie in den Systemeinstellungen.</string>
+    <string name="recordingfinished">Aufnahme beendet</string>
+    <string name="finishrecordingtext">Bist Du tatsächlich fertig mit der Aufnahme?</string>
+    <string name="deleterecordingtext">Soll die Aufnahme tatsächlich gelöscht werden?</string>
+    <string name="exitwarning">Schlechtwetterwarnung</string>
+    <string name="exitwarningtext">Dieses Fenster verlassen und Aufnahme abbrechen?</string>
+    <string name="recordingcancelled">Aufnahme abgebrochen</string>
+    <string name="nofileforuploadselected">"Es ist keine Datei zum Upload ausgewählt…"</string>
+    <string name="audiodeleted">Aufnahme gelöscht</string>
+    <string name="audiodeletederror">Fehler beim Löschen der Aufnahme</string>
+    <string name="saveaudioonphonetext">Möchtest Du das aufgenommene Audio auf dem Handyspeicher behalten?</string>
+    <string name="pleasefillintitle">Gib deiner memo vorher einen Titel</string>
+    <string name="fileuploadedsuccessfully">Aufzeichnung erfolgreich hochgeladen!</string>
+    <string name="saveaudioonphone">Audio verwerfen oder speichern</string>
+    <string name="errorfileupload">Fehler beim Hochladen. Audiodatei wurde auf dem Handyspeicher gesichert.</string>
+    <string name="onlymaxcatpreferredcategoriesALLOWED">Es sind nur bis zu 3 Lieblingskategorien wählbar</string>
+    <string name="onlyfivememorycategoriesALLOWED">Es sind nur bis zu 3 Kategorien wählbar</string>
+    <string name="pluginemailplease">Email eingeben, bitte..</string>
+    <string name="pluginnameplease">Namen eingeben, bitte..</string>
+    <string name="nousernamefound">Nutzername nicht gefunden</string>
+    <string name="credentialswrong">Nutzer oder Passwort falsch</string>
+    <string name="pluginpasswordplease">Passwort eingeben, bitte..</string>
+    <string name="pluginnameoremailplease">Name oder Email eingeben, bitte..</string>
+    <string name="passwordminimumeightcharacters">Passwort muss größer als 8 Zeichen sein.</string>
+    <string name="namemaximumfifteencharacters">Name darf nicht größer als 15 Zeichen sein.</string>
+    <string name="enablenotificationsindevicesettings">Bitte erlaube App-Benachrichtigungen in den Systemeinstellungen.</string>
+    <string name="nomemosfoundfittinganyofyourprefcat">Es wurden keine memos gefunden, die zu deinen Lieblingskategorien passen :(</string>
+    <string name="nomemosfoundfittinganyofyoursearchedcat">Es wurden keine memos gefunden, die zu deinen Suchkategorien passen :(</string>
+    <string name="norecentmemosfound">Es wurden keine kürzlichen memos gefunden</string>
+    <string name="noprefcatchosenwarning">Wähle Lieblingskategorien aus, um deine For You Page zu personalisieren.</string>
+    <string name="nosearchresults">Ich habe keine Suchergebnisse gefunden; versuch sonst, auf einer anderen Sprache zu suchen</string>
+    <string name="noextrasearchresults">Meine Suchanfrage findet keine weiteren memos</string>
+    <string name="record">Aufnehmen</string>
+
+
+</resources>
+    

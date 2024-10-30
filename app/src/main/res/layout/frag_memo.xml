@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativememolayoutid"
+    tools:context=".ui.memo.MemoFragment"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_centerVertical="true"
+    style="@style/SCREEN">
+
+        <!--collapsed-->
+    <LinearLayout
+        android:id="@+id/llcollapsedid"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/heartbuttoncollapsedid"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/like"
+            android:padding="13dp"
+            android:layout_marginEnd="20dp"
+            android:scaleType="fitCenter"
+            app:tint="@color/color_one"
+            tools:src="@drawable/heart_white_unfilled" />
+
+
+<!--tools:background="@drawable/heart_white_unfilled"-->
+
+        <TextView
+            android:id="@+id/titlecollapsedid"
+            style="@style/TXT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="14sp"
+            tools:hint="Der Weg nach Kalkutta - eine Reisebestätigung" />
+
+        <ImageButton
+            android:id="@+id/playbuttoncollapsedid"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/play_pause"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            app:tint="@color/color_ui"
+            android:src="@android:drawable/ic_media_play"
+            />
+
+    </LinearLayout>
+
+        <!--content-->
+
+    <LinearLayout
+        android:id="@+id/llcontentid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/llcollapsedid"
+        app:layout_constraintVertical_bias="0.55">
+
+
+        <!--1-->
+        <TextView
+            android:id="@+id/titleid"
+            style="@style/TXT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:hint="Der Weg nach Kalkutta - eine Reisebestätigung" />
+
+        <TextView
+            android:id="@+id/creatorid"
+            style="@style/TXT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="50dp"
+            android:textAlignment="center"
+            android:textColor="@color/lightgrey"
+            android:textSize="22sp"
+            tools:hint="Alfreet Wallnburga" />
+
+        <RelativeLayout
+            android:id="@+id/rldateandlanguageid"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/dateid"
+                style="@style/TXT"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/lightgrey"
+                android:textSize="20sp"
+                tools:hint="17. Feb 2024"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/languageflagid"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="15dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/language"
+                android:padding="12dp"
+                android:scaleType="fitXY"
+                tools:src="@drawable/germanflag" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <!--2-->
+        <SeekBar
+            android:id="@+id/seekbarid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="20dp" />
+
+
+        <!--3-->
+        <RelativeLayout
+            android:id="@+id/rlmediaplayerid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/heartbuttonid"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/like"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="26dp"
+                app:tint="@color/color_one"
+                tools:src="@drawable/heart_white_unfilled"
+                />
+
+            <!--
+
+            -->
+            <LinearLayout
+                android:id="@+id/llmediaplayerid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/rewindbuttonid"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="22dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:contentDescription="@string/rewind"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    app:tint="@color/color_ui"
+                    android:src="@android:drawable/ic_media_rew" />
+                <!--TODO (memofrag) rewind redundant -> verge to PREVIOUS -->
+
+                <ImageButton
+                    android:id="@+id/playbuttonid"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/play_pause"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    app:tint="@color/color_ui"
+                    android:src="@android:drawable/ic_media_play"
+                   />
+                <!-- tools:background="@drawable/playbutton"
+                @android:drawable/ic_media_play helps reduce size of APK :-)
+
+                -->
+                <ImageButton
+                    android:id="@+id/fastforwardbuttonid"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="22dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:contentDescription="@string/fastforward"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    app:tint="@color/color_ui"
+                    android:src="@android:drawable/ic_media_ff" />
+                <!--TODO (memofrag) fastfoward redundant -> verge to NEXT -->
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/remainingdurationid"
+                style="@style/TXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:hint="45:02" />
+            <!--TODO (A) die duration soll angepasst werden auf RESTLICHE MEMORYDURATION- also je nachdem, wie man schon angehört hat -->
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
